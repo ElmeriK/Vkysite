@@ -8,7 +8,7 @@ import Modal from './Modal'
 
 
 function Tj() {
-    const backURL = ""
+    const backURL = "http://localhost:3001"
     const [showPopup, setShowPopup] = useState<Boolean>(false)
     const [tjPopupState, setTjPopupState] = useState<PopupState>("Open")
     const [tjList, setTjList] = useState<Tj[]>([])

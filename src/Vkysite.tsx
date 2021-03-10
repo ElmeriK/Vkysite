@@ -17,9 +17,11 @@ function Vkysite() {
   useEffect(getVideos, [])
   useEffect(getFood, [])
 
+  const backURL = "http://localhost:3001"
+
   function getImages() {
     axios
-      .get('http://VKYT003:3001/api/images')
+      .get(backURL + '/api/images')
       .then(response => {
         setImages(response.data)
       })
@@ -27,7 +29,7 @@ function Vkysite() {
 
   function getVideos() {
     axios
-      .get('http://VKYT003:3001/api/videos')
+      .get(backURL + '/api/videos')
       .then(response => {
         setVideos(response.data)
     
@@ -36,7 +38,7 @@ function Vkysite() {
 
   function getFood() {
     axios
-      .get('http://VKYT003:3001/api/food')
+      .get(backURL + '/api/food')
       .then(response =>{
         setFoodList(response.data)
       })

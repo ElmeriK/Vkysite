@@ -5,10 +5,11 @@ const fs = require('fs');
 const foodRSS = require('./foodRSS')
 const bodyParser = require('body-parser');
 
-const backURL = ""
+const backURL = "http://localhost:3001"
 
 app.use(cors());
 app.use(express.static('assets'));
+app.options('*', cors());
 app.use(bodyParser.json())
 
 app.get('/api/images', (request, response) => {
